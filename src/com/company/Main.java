@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -41,6 +42,10 @@ public class Main {
         //creating two new employees means count will be = 2
 
 
+        List list = new ArrayList<EmployeeCount>() {
+
+        };
+
 
         EmployeeCount[] employeeCounts = {new EmployeeCount("hans", "mbua"),
                 new EmployeeCount("jeo", "ben"),
@@ -58,6 +63,16 @@ public class Main {
             System.out.println("there first names are: " + nameofemploy);
 
         }
+
+        System.out.println("testing GUI here");
+
+        DrawPanel panel = new DrawPanel();
+
+        JFrame jframe = new JFrame();
+        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jframe.add(panel);
+        jframe.setSize(300, 300);
+        jframe.setVisible(true);
 
 
     }
